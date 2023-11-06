@@ -10,7 +10,7 @@ namespace crunch.NET
 {
     public static class Crunch
     {
-        public static unsafe byte[] Compress(int width, int height, List<List<Memory<byte>>> data, 
+        public static unsafe byte[] Compress(int width, int height, List<List<Memory<byte>>> data,
             crn_format format,
             crn_mipmap_params mipmaps = null, int maxThreads = -1)
         {
@@ -129,7 +129,7 @@ namespace crunch.NET
 
                 try
                 {
-                    context = NativeMethods.crnd_unpack_begin(new IntPtr(dataHandle.Pointer), (uint)rawData.Length); 
+                    context = NativeMethods.crnd_unpack_begin(new IntPtr(dataHandle.Pointer), (uint)rawData.Length);
 
                     for (int m = 0; m < info.levels; m++)
                     {
