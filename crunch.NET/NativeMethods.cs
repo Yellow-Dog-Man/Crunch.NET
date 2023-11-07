@@ -18,7 +18,7 @@ namespace crunch.NET
         public static extern void enable_console_output();
 
         [DllImport(LIBRARY_NAME)]
-        public static extern IntPtr crn_compress(crn_comp_params comp_params, 
+        public static extern IntPtr crn_compress(crn_comp_params comp_params,
             out uint compressed_size, out uint actual_quality_level, out float actual_bitrate);
 
         [DllImport(LIBRARY_NAME)]
@@ -35,8 +35,8 @@ namespace crunch.NET
         public static extern IntPtr crnd_unpack_begin(IntPtr data, uint data_size);
 
         [DllImport(LIBRARY_NAME)]
-        public static extern bool crnd_unpack_level(IntPtr context, 
-            IntPtr destPointers, uint dest_disze_in_bytes, uint row_pitch_in_bytes, 
+        public static extern bool crnd_unpack_level(IntPtr context,
+            IntPtr destPointers, uint dest_disze_in_bytes, uint row_pitch_in_bytes,
             uint level_index);
 
         [DllImport(LIBRARY_NAME)]
