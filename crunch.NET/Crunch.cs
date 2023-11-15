@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Runtime.InteropServices;
 using System.Buffers;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
 
 namespace crunch.NET
 {
@@ -51,8 +48,8 @@ namespace crunch.NET
 
             try
             {
-                for(int f = 0; f < data.Count; f++)
-                    for(int m = 0; m < levels; m++)
+                for (int f = 0; f < data.Count; f++)
+                    for (int m = 0; m < levels; m++)
                     {
                         var handle = data[f][m].Pin();
                         handles.Add(handle);
@@ -95,7 +92,7 @@ namespace crunch.NET
         public static unsafe bool Decompress(byte[] rawData, List<List<Memory<byte>>> data, out crn_texture_info info,
             Action<crn_texture_info> onInfoDecoded = null)
         {
-            fixed(byte* pData = rawData)
+            fixed (byte* pData = rawData)
             {
                 info = new crn_texture_info();
 
@@ -146,7 +143,7 @@ namespace crunch.NET
                         {
                             for (int f = 0; f < info.faces; f++)
                             {
-                                if(allocateData)
+                                if (allocateData)
                                 {
                                     var face_data = new byte[face_size];
                                     data[f].Add(face_data.AsMemory());
