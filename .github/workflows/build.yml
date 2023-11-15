@@ -22,5 +22,5 @@ jobs:
       - name: Build
         run: |
           cd crunch.NET
-          dotnet restore
+          dotnet restore crunch.NET.csproj
           dotnet build crunch.NET.csproj --configuration Release
