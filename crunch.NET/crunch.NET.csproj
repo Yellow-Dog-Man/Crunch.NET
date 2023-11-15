@@ -1,6 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
+    <Company>Yellow Dog Man Studios s.r.o.</Company>
+    <Authors>Yellow Dog Man Studios</Authors>
+    <PackageId>YellowDogMan.crunch.NET</PackageId>
+    <Description>.NET wrapper for the crunch library for texture compression</Description>
+    <Copyright>Copyright (c) 2023 Yellow Dog Man Studios s.r.o.</Copyright>
+    <RepositoryUrl>https://github.com/Yellow-Dog-Man/Crunch.NET</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectURL>https://github.com/Yellow-Dog-Man/Crunch.NET</PackageProjectURL>
+    <PackageTags>crunch image compression</PackageTags>
+    <NuspecFile>crunch.NET.nuspec</NuspecFile>
+    <NuspecProperties>version=$(Version)</NuspecProperties>
+    <PackageIcon>icon.png</PackageIcon>
+  </PropertyGroup>
+  <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{6CDEA2AE-110D-4EA0-9FE8-54FF99CD60E0}</ProjectGuid>
@@ -39,6 +53,7 @@
     <Content Include="crnlib.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Images\icon.png" Pack="true" PackagePath="\"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
