@@ -20,6 +20,4 @@ jobs:
         with:
           dotnet-version: 7.0.x
       - name: Build
-        run: |
-          dotnet restore
-          dotnet build crunch.net --configuration Release --no-restore
+        run: dotnet build crunch.NET/crunch.NET.csproj --configuration Release
