@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>YellowDogMan.crunch.NET</id>
+    <version>$version$</version>
+    <authors>Yellow Dog Man Studios S.r.o.</authors>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/Yellow-Dog-Man/Crunch.NET</projectUrl>
+    <description>.NET wrapper for the crunch library for texture compression</description>
+    <copyright>Yellow Dog Man Studios s.r.o. 2023</copyright>
+    <dependencies>
+      <group targetFramework="net46" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src=".\bin\Release\net46\crunch.NET.dll" target="lib\net46\"/>
+    <file src=".\bin\Release\net46\crnlib.dll" target="runtimes\win-x64\native\" />
+  </files>
+</package>
