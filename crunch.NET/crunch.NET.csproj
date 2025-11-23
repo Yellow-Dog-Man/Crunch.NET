@@ -50,7 +50,13 @@
     <PackageReference Include="System.Memory" Version="4.5.5" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="crnlib.dll">
+    <Content Include="bins\win-x64\crnlib.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bins\linux-arm64\libcrnlib.so">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bins\linux-x64\libcrnlib.so">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Images\icon.png" Pack="true" PackagePath="\"/>
